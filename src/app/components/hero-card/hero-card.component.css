@@ -1,0 +1,37 @@
+/* Tarjeta de héroe tipo Mobile Legends */
+.hero-card {
+  background: linear-gradient(135deg, #181f2e 80%, #2e5bff 100%);
+  color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px #0007;
+  padding: 18px 12px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  min-width: 140px;
+  max-width: 180px;
+  margin: 0 auto;
+}
+.hero-card:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 6px 24px #000a;
+}
+.hero-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffd700;
+  margin-bottom: 10px;
+  background: #222b3a;
+}
+.hero-card .hero-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffd700;
+  margin-top: 6px;
+  letter-spacing: 1px;
+  text-align: center;
+}

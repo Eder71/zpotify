@@ -1,0 +1,64 @@
+/* Estilos para el dashboard de administración */
+.dashboard-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #181f2e;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 #000a, 0 1.5px 0 0 #2e3a5e;
+  padding: 32px 24px 40px 24px;
+  color: #fff;
+}
+.dashboard-container h1 {
+  font-size: 2.2rem;
+  color: #ffd700;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.dashboard-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.dashboard-btn {
+  background: linear-gradient(90deg, #1e2a4a 60%, #2e5bff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 #0005;
+  transition: background 0.2s, transform 0.2s;
+}
+.dashboard-btn:hover {
+  background: linear-gradient(90deg, #2e5bff 60%, #ffd700 100%);
+  color: #181f2e;
+  transform: translateY(-2px) scale(1.04);
+}
+.dashboard-content {
+  background: #10182a;
+  border-radius: 12px;
+  padding: 32px 20px;
+  min-height: 180px;
+  box-shadow: 0 1px 8px 0 #0003;
+  text-align: center;
+  font-size: 1.1rem;
+}
+@media (max-width: 600px) {
+  .dashboard-container {
+    padding: 16px 4px 24px 4px;
+  }
+  .dashboard-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .dashboard-btn {
+    width: 100%;
+    padding: 12px 0;
+  }
+}

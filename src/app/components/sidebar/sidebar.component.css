@@ -1,0 +1,74 @@
+/* Sidebar tipo Mobile Legends */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 320px;
+  height: 100vh;
+  background: linear-gradient(180deg, #181f2e 80%, #2e5bff 100%);
+  color: #fff;
+  box-shadow: -2px 0 16px #000a;
+  z-index: 100;
+  padding: 32px 24px 24px 24px;
+  transition: right 0.3s cubic-bezier(.77,0,.18,1);
+}
+.sidebar.open {
+  right: 0;
+}
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: #ffd700;
+  font-size: 2.2rem;
+  cursor: pointer;
+  z-index: 101;
+}
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 60px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.sidebar-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 8px 0;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.sidebar-link.active, .sidebar-link:hover {
+  background: #ffd700;
+  color: #181f2e;
+}
+.tools-menu {
+  position: relative;
+}
+.tools-submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: #222b3a;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0007;
+  padding: 8px 0;
+  min-width: 140px;
+  z-index: 102;
+}
+.tools-menu:hover .tools-submenu {
+  display: block;
+}
+@media (max-width: 500px) {
+  .sidebar {
+    width: 100vw;
+    padding: 24px 8px 16px 8px;
+  }
+}

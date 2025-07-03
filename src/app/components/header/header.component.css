@@ -1,0 +1,128 @@
+/* Estilos avanzados para el header tipo Mobile Legends */
+.ml-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #10182a 80%, #2e5bff 100%);
+  color: #fff;
+  padding: 0 32px;
+  height: 72px;
+  box-shadow: 0 2px 12px 0 #0007;
+  position: relative;
+  z-index: 10;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+}
+.ml-logo {
+  height: 48px;
+  width: auto;
+  filter: drop-shadow(0 2px 8px #000a);
+}
+.header-center {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.lang-select {
+  background: #181f2e;
+  color: #ffd700;
+  border: 1px solid #2e5bff;
+  border-radius: 6px;
+  padding: 6px 16px;
+  font-weight: 600;
+  font-size: 1rem;
+  outline: none;
+  margin-right: 8px;
+}
+.login-btn {
+  background: linear-gradient(90deg, #2e5bff 60%, #ffd700 100%);
+  color: #181f2e;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 24px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 #0005;
+  margin-right: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+.login-btn:hover {
+  background: linear-gradient(90deg, #ffd700 60%, #2e5bff 100%);
+  color: #2e5bff;
+}
+.store-link {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin: 0 4px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.store-link.appstore {
+  background-image: url('/assets/appstore.png');
+}
+.store-link.googleplay {
+  background-image: url('/assets/googleplay.png');
+}
+.store-link.apk {
+  background: #ffd700;
+  color: #181f2e;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-left: 8px;
+  text-decoration: none;
+  box-shadow: 0 1px 4px #0003;
+  transition: background 0.2s, color 0.2s;
+}
+.store-link.apk:hover {
+  background: #2e5bff;
+  color: #fff;
+}
+.store-link:hover {
+  opacity: 1;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+}
+.burger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  margin-left: 12px;
+}
+.burger-btn span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  background: #ffd700;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+@media (max-width: 700px) {
+  .ml-header {
+    flex-direction: column;
+    height: auto;
+    padding: 8px 8px 0 8px;
+  }
+  .header-center {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0;
+  }
+  .ml-logo {
+    height: 36px;
+  }
+}

@@ -1,0 +1,127 @@
+/* Modal de login tipo Mobile Legends */
+.login-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #222b3a;
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px #000a;
+  padding: 40px 32px 32px 32px;
+  min-width: 340px;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: #ffd700;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+.login-title {
+  font-size: 1.5rem;
+  color: #ffd700;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+}
+.login-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.login-main-btn {
+  background: linear-gradient(90deg, #2e5bff 60%, #ffd700 100%);
+  color: #181f2e;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 #0005;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+.login-main-btn:hover {
+  background: linear-gradient(90deg, #ffd700 60%, #2e5bff 100%);
+  color: #2e5bff;
+}
+.icon-lightning {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url('/assets/lightning.svg') no-repeat center/contain;
+}
+.icon-phone {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url('/assets/phone.svg') no-repeat center/contain;
+}
+.login-info {
+  margin: 18px 0 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.download-btn {
+  background: #ffd700;
+  color: #181f2e;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 18px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px #0003;
+  transition: background 0.2s, color 0.2s;
+}
+.download-btn:hover {
+  background: #2e5bff;
+  color: #fff;
+}
+.login-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.social-btn {
+  background: #181f2e;
+  color: #ffd700;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 1px 4px #0003;
+  transition: background 0.2s, color 0.2s;
+}
+.social-btn.fb:hover {
+  background: #3b5998;
+  color: #fff;
+}
+.social-btn.google:hover {
+  background: #fff;
+  color: #ea4335;
+}
+@media (max-width: 500px) {
+  .login-modal {
+    min-width: 90vw;
+    padding: 24px 4px 16px 4px;
+  }
+}
