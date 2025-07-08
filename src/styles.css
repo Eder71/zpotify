@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* Overlay oscuro para el modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  z-index: 150;
+  backdrop-filter: blur(2px);
+}
+
+/* Blur al fondo cuando el modal está abierto */
+.blurred {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Ajuste para evitar scroll cuando el modal está abierto */
+body.modal-open {
+  overflow: hidden;
+}

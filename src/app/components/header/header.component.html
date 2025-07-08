@@ -4,17 +4,17 @@
     <img src="assets/logo-ml.png" alt="Mobile Legends Logo" class="ml-logo" />
   </div>
   <div class="header-center">
-    <select class="lang-select">
-      <option>EN</option>
-      <option>ES</option>
+    <select class="lang-select" [value]="currentLang" (change)="onLangChange($event)">
+      <option value="EN">EN</option>
+      <option value="ES">ES</option>
     </select>
-    <button class="login-btn">Login</button>
+    <button class="login-btn" (click)="openLogin()">Login</button>
     <a href="#" class="store-link appstore" title="App Store"></a>
     <a href="#" class="store-link googleplay" title="Google Play"></a>
     <a href="#" class="store-link apk" title="Free Apk Download">Free Apk Download</a>
   </div>
   <div class="header-right">
-    <button class="burger-btn" aria-label="Abrir menú">
+    <button class="burger-btn" aria-label="Abrir menú" (click)="appState.openSidebar()">
       <span></span><span></span><span></span>
     </button>
   </div>

@@ -1,4 +1,28 @@
-<!-- Listado de héroes y filtros -->
-<section>
-  <!-- Filtros y grid de héroes -->
+
+<section class="heroes-gallery">
+  <!-- Barra de filtros superior -->
+  <div class="heroes-filters">
+    <button *ngFor="let role of roles"
+            [class.active]="selectedRole === role"
+            (click)="filterByRole(role)">
+      {{ role }}
+    </button>
+    <div class="lane-dropdown-wrapper">
+      <button (click)="showLaneDropdown = !showLaneDropdown" [class.active]="selectedLane">All All ▼</button>
+      <div class="lane-dropdown" *ngIf="showLaneDropdown">
+        <button *ngFor="let lane of lanes" (click)="filterByLane(lane)">{{ lane }}</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid de héroes -->
+  <div class="heroes-grid">
+    <app-hero-card *ngFor="let hero of filteredHeroes" [hero]="hero"></app-hero-card>
+    <div *ngIf="filteredHeroes.length === 0" class="empty-msg">Todavía no hay nada aquí.</div>
+  </div>
+
+  <!-- Barra de búsqueda -->
+  <div class="heroes-search-bar">
+    <input type="text" placeholder="Q Búsqueda" [value]="search" (input)="onSearchInput($event)" />
+  </div>
 </section>

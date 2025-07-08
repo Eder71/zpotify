@@ -1,4 +1,6 @@
+
 <!-- Tarjeta de héroe reutilizable -->
-<div class="hero-card">
-  <!-- Imagen y nombre del héroe -->
+<div class="hero-card" *ngIf="hero">
+  <img [src]="hero.img" [alt]="hero.name" />
+  <div class="hero-name">{{ hero.name }}</div>
 </div>

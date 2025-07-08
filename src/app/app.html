@@ -1,8 +1,11 @@
+
 <!-- Estructura principal de la app Mobile Legends Hub -->
-<app-header></app-header>
-<app-sidebar></app-sidebar>
-<app-login-popup></app-login-popup>
-<main class="main-content">
-  <router-outlet></router-outlet>
-</main>
-<router-outlet />
+<div class="app-content-wrapper" [class.blurred]="loginOpen$ | async">
+  <app-header></app-header>
+  <app-sidebar></app-sidebar>
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+<div *ngIf="loginOpen$ | async" class="modal-overlay"></div>
+<app-login-popup *ngIf="loginOpen$ | async"></app-login-popup>

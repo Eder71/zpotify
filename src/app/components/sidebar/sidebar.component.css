@@ -43,6 +43,39 @@
   padding: 8px 0;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.icon-home {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  background: url('/assets/icons/home.svg') no-repeat center/contain;
+}
+.icon-news {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  background: url('/assets/icons/news.svg') no-repeat center/contain;
+}
+.icon-heroes {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  background: url('/assets/icons/hero.svg') no-repeat center/contain;
+}
+.icon-videos {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  background: url('/assets/icons/video.svg') no-repeat center/contain;
+}
+.icon-fanart {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  background: url('/assets/icons/fanart.svg') no-repeat center/contain;
 }
 .sidebar-link.active, .sidebar-link:hover {
   background: #ffd700;

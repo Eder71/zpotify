@@ -1,0 +1,19 @@
+<div class="social-login-modal-overlay">
+  <div class="social-login-modal">
+    <button class="close-btn" (click)="onClose()">&times;</button>
+    <div class="logo-row">
+      <img [src]="logoUrl" [alt]="providerName + ' logo'" class="provider-logo" />
+      <span class="provider-title">Iniciar sesión con {{ providerName }}</span>
+    </div>
+    <form (ngSubmit)="submit()" *ngIf="!loading">
+      <input type="email" placeholder="Correo electrónico" [(ngModel)]="email" name="email" required />
+      <input type="password" placeholder="Contraseña" [(ngModel)]="password" name="password" required />
+      <div class="error" *ngIf="error">{{ error }}</div>
+      <button type="submit" class="login-btn">Continuar</button>
+    </form>
+    <div class="loading-row" *ngIf="loading">
+      <span class="spinner"></span>
+      <span>Iniciando sesión...</span>
+    </div>
+  </div>
+</div>

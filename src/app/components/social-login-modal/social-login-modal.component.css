@@ -1,0 +1,118 @@
+.social-login-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.7);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-login-modal {
+  background: linear-gradient(135deg, #2e5bff 60%, #ffd700 100%);
+  border-radius: 22px;
+  box-shadow: 0 8px 40px #000b, 0 1.5px 0 0 #2e3a5e;
+  padding: 38px 32px 28px 32px;
+  min-width: 320px;
+  max-width: 95vw;
+  width: 370px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #fff;
+  animation: popin 0.4s cubic-bezier(.77,0,.18,1);
+}
+@keyframes popin {
+  0% { transform: scale(0.7) translateY(60px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #222b3a;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.provider-logo {
+  width: 36px;
+  height: 36px;
+}
+.provider-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #2e5bff;
+  text-shadow: 0 2px 8px #ffd70099, 0 1px 0 #fff;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  margin-top: 10px;
+}
+input[type="email"], input[type="password"] {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 2px solid #2e5bff;
+  font-size: 1.08rem;
+  outline: none;
+  background: #fffbe7;
+  color: #2e5bff;
+  font-weight: 600;
+  box-shadow: 0 1px 4px #0002;
+}
+.login-btn {
+  background: linear-gradient(90deg, #ffd700 60%, #2e5bff 100%);
+  color: #2e5bff;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 0;
+  font-weight: 800;
+  font-size: 1.13rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 #0005;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  transition: background 0.2s, color 0.2s;
+}
+.login-btn:hover {
+  background: linear-gradient(90deg, #2e5bff 60%, #ffd700 100%);
+  color: #ffd700;
+}
+.error {
+  color: #ff4d4f;
+  font-size: 0.98rem;
+  margin-bottom: 2px;
+  text-align: center;
+}
+.loading-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 18px;
+}
+.spinner {
+  border: 3px solid #ffd700;
+  border-top: 3px solid #2e5bff;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-right: 0;
+  vertical-align: middle;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
